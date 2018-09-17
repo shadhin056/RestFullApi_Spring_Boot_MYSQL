@@ -5,11 +5,15 @@ import com.example.restfulapiproject.Service.RestDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/rest")
+@RequestMapping(path = "/restfulapi")
 public class UserController {
     @Autowired
     RestDAO restDAO;

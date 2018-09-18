@@ -3,10 +3,13 @@ package com.example.restfulapiproject.Service;
 import com.example.restfulapiproject.Model.User;
 import com.example.restfulapiproject.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Component
 @Service
+
 public class RestDAO {
     @Autowired
     UserRepository userRepository;

@@ -5,10 +5,6 @@ import com.example.restfulapiproject.Service.RestDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -19,12 +15,12 @@ public class UserController {
     RestDAO restDAO;
 
     //save user
-    @PostMapping(path = "/user")
+    @PostMapping(path = "/users")
     public User createUser(@Valid @RequestBody User user) {
         return restDAO.save(user);
     }
     // get all users
-    @GetMapping(path = "/user")
+    @GetMapping(path = "/users")
     public List<User> getAlluser() {
         return restDAO.findAll();
     }
